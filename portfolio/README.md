@@ -26,10 +26,18 @@ Extras: menu fixo que destaca a seção atual, menu hambúrguer no celular, anim
 
 | Projeto | Stack | Repositório |
 |---|---|---|
+| **Vitrine**: e-commerce completo com carrinho, cupons, frete e checkout validado | React, Context API | [vitrine-ecommerce](https://github.com/beatrizaandradee/vitrine-ecommerce) |
+| **Rota**: app de mobilidade estilo Uber, com mapa, preços e corrida ao vivo | React, SVG | [rota-app](https://github.com/beatrizaandradee/rota-app) |
+| **Ritmo**: app de corrida com GPS, pace, parciais e metas | React, Geolocation API | [ritmo-corrida](https://github.com/beatrizaandradee/ritmo-corrida) |
+| **Lumi**: plataforma de streaming com perfis, recomendações e player | React, Canvas, SVG | [lumi-streaming](https://github.com/beatrizaandradee/lumi-streaming) |
 | **Finanças+**: controle financeiro com dashboard, orçamentos e metas | React, Vite, SVG | [financas-app](https://github.com/beatrizaandradee/financas-app) |
 | **Simulador de Investimentos**: Poupança x Tesouro x CDB x LCI com IR regressivo | JavaScript, Canvas | [simulador-investimentos](https://github.com/beatrizaandradee/simulador-investimentos) |
 | **Análise de Gastos**: lê extrato CSV e gera relatório com recomendações | Python, pandas, matplotlib | [analise-gastos](https://github.com/beatrizaandradee/analise-gastos) |
 | **Mini Projetos**: calculadora, lista de tarefas, gerador de senhas, jogo da velha (Minimax) e pomodoro, **jogáveis dentro do próprio portfólio** | HTML, CSS, JavaScript | [`public/mini-projetos`](public/mini-projetos) |
+
+### ▶️ Projetos testáveis dentro do portfólio
+
+Cada projeto da linha do tempo tem o botão **"Testar aqui"**, que abre o app funcionando numa janela por cima do site (iframe). As versões ficam em `public/apps/<projeto>/` e são o resultado do `npm run build` de cada repositório. Para atualizar um app, rode o build no repositório dele e copie a pasta `dist/` para `public/apps/<projeto>/`.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -66,6 +74,7 @@ portfolio/
 │   ├── img/                 # Foto do prêmio
 │   ├── certificados/        # PDFs + miniaturas dos certificados
 │   ├── mini-projetos/       # 5 mini apps em JS puro (abrem numa janela dentro do site)
+│   ├── apps/                # Versões compiladas dos projetos, testáveis dentro do portfólio
 │   └── projects/            # GIFs e prints dos projetos
 ├── src/
 │   ├── components/          # Componentes reutilizáveis

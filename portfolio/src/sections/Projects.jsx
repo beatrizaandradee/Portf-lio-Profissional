@@ -11,7 +11,12 @@ function formatDate(date, lang) {
   return new Date(y, (m || 1) - 1).toLocaleDateString(lang === 'pt' ? 'pt-BR' : 'en-US', { month: 'short', year: 'numeric' })
 }
 
-function ProjectModal({ project, onClose }) {
+const isInternal = (url) => url && url.startsWith('/')
+
+// Converte um projeto da linha do tempo para o formato da janela de teste
+const asApp = (p) => ({ name: p.name, icon: p.frame === 'phone' ? '📱' : '🖥️', live: p.demo, repo: p.repo, frame: p.frame })
+
+function ProjectModal({ project, onClose, onTry }) {
   const { t, pick, lang } = useLang()
 
   useEffect(() => {
@@ -47,11 +52,16 @@ function ProjectModal({ project, onClose }) {
             <a className="btn btn--primary btn--sm" href={project.repo} target="_blank" rel="noreferrer">
               <FiGithub /> {t.projects.repo}
             </a>
-            {project.demo && (
-              <a className="btn btn--ghost btn--sm" href={project.demo} target="_blank" rel="noreferrer">
-                <FiExternalLink /> {t.projects.demo}
-              </a>
-            )}
+            {project.demo &&
+              (isInternal(project.demo) ? (
+                <button type="button" className="btn btn--ghost btn--sm" onClick={() => onTry(project)}>
+                  <FiPlay /> {t.projects.play}
+                </button>
+              ) : (
+                <a className="btn btn--ghost btn--sm" href={project.demo} target="_blank" rel="noreferrer">
+                  <FiExternalLink /> {t.projects.demo}
+                </a>
+              ))}
           </div>
         </div>
       </div>
@@ -75,7 +85,7 @@ function MiniModal({ mini, onClose }) {
 
   return (
     <div className="modal" role="dialog" aria-modal="true" aria-label={pick(mini.name)} onClick={onClose}>
-      <div className="modal__box mini-modal" onClick={(e) => e.stopPropagation()}>
+      <div className={`modal__box mini-modal mini-modal--${mini.frame || 'default'}`} onClick={(e) => e.stopPropagation()}>
         <div className="mini-modal__bar">
           <strong>
             <span aria-hidden="true">{mini.icon}</span> {pick(mini.name)}
@@ -92,13 +102,11 @@ function MiniModal({ mini, onClose }) {
             </button>
           </div>
         </div>
-        <iframe src={mini.live} title={pick(mini.name)} />
+        <iframe src={mini.live} title={pick(mini.name)} allow="fullscreen; geolocation; clipboard-write" />
       </div>
     </div>
   )
 }
-
-const isInternal = (url) => url && url.startsWith('/')
 
 export default function Projects() {
   const { t, pick, lang } = useLang()
@@ -138,9 +146,16 @@ export default function Projects() {
                     ))}
                   </div>
                   <div className="tl__actions">
-                    <button type="button" className="btn btn--ghost btn--sm" onClick={() => setSelected(p)}>
-                      {t.projects.details} <FiArrowRight />
-                    </button>
+                    <div className="tl__btns">
+                      <button type="button" className="btn btn--ghost btn--sm" onClick={() => setSelected(p)}>
+                        {t.projects.details} <FiArrowRight />
+                      </button>
+                      {isInternal(p.demo) && (
+                        <button type="button" className="btn btn--primary btn--sm" onClick={() => setMiniOpen(asApp(p))}>
+                          <FiPlay /> {t.projects.play}
+                        </button>
+                      )}
+                    </div>
                     <a className="icon-link" href={p.repo} target="_blank" rel="noreferrer" aria-label={`${t.projects.repo} GitHub`}>
                       <FiGithub size={18} /> GitHub
                     </a>
@@ -203,7 +218,16 @@ export default function Projects() {
         </div>
       </div>
 
-      {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
+      {selected && (
+        <ProjectModal
+          project={selected}
+          onClose={() => setSelected(null)}
+          onTry={(p) => {
+            setSelected(null)
+            setMiniOpen(asApp(p))
+          }}
+        />
+      )}
       {miniOpen && <MiniModal mini={miniOpen} onClose={() => setMiniOpen(null)} />}
     </section>
   )

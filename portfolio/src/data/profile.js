@@ -31,12 +31,12 @@ export const profile = {
   about: {
     pt: [
       'Sou estudante de Engenharia de Software na PUC Minas, em Belo Horizonte. Cursei o ensino médio no Colégio Educare e no SESI Betim e fui premiada no Prêmio Stellantis de Educação, que reconhece estudantes pelo desempenho acadêmico.',
-      'Meu foco é desenvolvimento web com React e JavaScript, e também uso Python para análise de dados. Gosto especialmente de projetos ligados a finanças pessoais: criei um app de controle financeiro, um simulador de investimentos e uma ferramenta que analisa extratos bancários.',
+      'Meu foco é desenvolvimento web com React e JavaScript, e também uso Python para análise de dados. Já desenvolvi um e-commerce completo, um app de mobilidade urbana, um app de corrida com GPS, uma plataforma de streaming e projetos de finanças pessoais, como um app de controle financeiro e um analisador de extratos em Python.',
       'Busco meu primeiro estágio em desenvolvimento para aprender com um time, contribuir com produtos reais e crescer como engenheira de software.',
     ],
     en: [
       "I'm a Software Engineering student at PUC Minas, in Belo Horizonte, Brazil. I attended high school at Colégio Educare and SESI Betim, and I received the Stellantis Education Award, which recognizes students for academic achievement.",
-      'My focus is web development with React and JavaScript, and I also use Python for data analysis. I especially enjoy personal finance projects: I built a money management app, an investment simulator and a tool that analyzes bank statements.',
+      'My focus is web development with React and JavaScript, and I also use Python for data analysis. I have built a full e-commerce, a ride-hailing app, a GPS running app, a streaming platform and personal finance projects, such as a money manager and a Python bank statement analyzer.',
       "I'm looking for my first software development internship, to learn with a team, contribute to real products and grow as a software engineer.",
     ],
   },
