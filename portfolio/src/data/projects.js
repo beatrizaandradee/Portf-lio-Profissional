@@ -1,3 +1,9 @@
+// =====================================================================
+//  EDITE AQUI: seus projetos.
+//  - "date" no formato 'AAAA-MM-DD' (ou 'AAAA-MM'): a linha do tempo ordena sozinha.
+//  - "image": GIF/print em /public/projects/
+//  - "repo": link do repositório; "demo": link do site publicado ('' se não tiver)
+// =====================================================================
 
 const GH = 'https://github.com/beatrizaandradee'
 
@@ -144,5 +150,22 @@ export const projects = [
     image: '/projects/lumi-streaming.gif',
     repo: `${GH}/lumi-streaming`,
     demo: '/apps/lumi-streaming/',
+  },
+  {
+    id: 'portfolio',
+    date: '2026-11-22',
+    name: { pt: 'Portfólio Pessoal', en: 'Personal Portfolio' },
+    description: {
+      pt: 'Este site! Portfólio bilíngue em React + Vite, com linha do tempo, certificados e formulário de contato.',
+      en: 'This website! A bilingual React + Vite portfolio with a timeline, certificates and a contact form.',
+    },
+    details: {
+      pt: 'Fundo estrelado animado em canvas, crachá interativo, troca de idioma PT/EN com Context API, linha do tempo de projetos ordenada automaticamente, galeria de certificados e formulário com validação e envio real por e-mail. Hospedado na Vercel.',
+      en: 'Animated canvas starfield, interactive badge, PT/EN language switch with Context API, auto-sorted project timeline, certificate gallery and a validated contact form that sends real e-mails. Hosted on Vercel.',
+    },
+    tech: ['React', 'Vite', 'CSS3', 'Vercel'],
+    image: '/projects/portfolio.jpg',
+    repo: `${GH}/portfolio`,
+    demo: '',
   },
 ]
