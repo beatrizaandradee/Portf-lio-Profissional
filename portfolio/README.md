@@ -13,8 +13,7 @@ Portfólio profissional de **Beatriz Almeida Andrade**, estudante de **Engenhari
 |---|---|
 | **Início** | Tela de carregamento com porcentagem, título com gradiente, texto com efeito de digitação, crachá interativo que balança e inclina com o mouse, atalhos para redes sociais |
 | **Sobre Mim** | Apresentação em **PT e EN** (botão PT/EN no menu), foto, formação, contadores (projetos, experiências, tecnologias) e grade de tecnologias |
-| **Projetos** | **Linha do tempo dinâmica** ordenada automaticamente do mais antigo para o mais recente. Cada projeto tem nome, descrição, tecnologias, link do GitHub e imagem/GIF. Botão "Detalhes" abre um modal |
-| **Experiências** | Cards com empresa/instituição, cargo/atividade, período, descrição e tipo (prêmio, acadêmico, curso, evento) |
+| **Projetos** | **Linha do tempo dinâmica** ordenada automaticamente do mais antigo para o mais recente. Cada projeto tem nome, descrição, tecnologias, link do GitHub e imagem/GIF. Bnpm install
 | **Conquistas** | Destaque do Prêmio Stellantis de Educação com foto da cerimônia e galeria de certificados (Santander, Enap, Empowerdata, PUC Minas) que abrem o PDF original |
 | **Contato** | Ícones clicáveis (e-mail, WhatsApp, LinkedIn, GitHub, Instagram) e **formulário com envio real por e-mail**, validação dos campos e proteção anti-spam |
 
