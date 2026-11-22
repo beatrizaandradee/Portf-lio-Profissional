@@ -2,7 +2,7 @@
 
 Portfólio profissional de **Beatriz Almeida Andrade**, estudante de **Engenharia de Software na PUC Minas** e premiada no **Prêmio Stellantis de Educação**. Desenvolvido em **React + Vite**, com visual escuro inspirado no espaço (fundo estrelado animado), bilíngue (**português / inglês**), responsivo e hospedado gratuitamente na nuvem.
 
-🔗 **Site publicado:** https://SEU-PROJETO.vercel.app  ← _troque pelo link depois do deploy_
+🔗 **Site publicado:** https://portfolio-profissional-six-phi.vercel.app 
 📁 **Repositório:** https://github.com/beatrizaandradee/portfolio
 
 ---
