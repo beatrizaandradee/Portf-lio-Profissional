@@ -1,6 +1,6 @@
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaNodeJs, FaPython, FaFigma, FaDatabase, FaJava } from 'react-icons/fa'
-import { SiVite, SiVercel, SiMysql, SiTypescript } from 'react-icons/si'
-import { FiCode } from 'react-icons/fi'
+import { SiVite, SiVercel, SiMysql, SiTypescript, SiPandas, SiPytest, SiGithubcopilot } from 'react-icons/si'
+import { FiCode, FiBarChart2, FiPenTool } from 'react-icons/fi'
 
 // Mapa nome → ícone + cor. Para adicionar uma tecnologia nova, inclua uma linha aqui.
 const MAP = {
@@ -19,6 +19,11 @@ const MAP = {
   Vercel: { Icon: SiVercel, color: '#ffffff' },
   MySQL: { Icon: SiMysql, color: '#4479a1' },
   SQL: { Icon: FaDatabase, color: '#7aa2ff' },
+  Pandas: { Icon: SiPandas, color: '#e70488' },
+  Matplotlib: { Icon: FiBarChart2, color: '#4da3d9' },
+  Pytest: { Icon: SiPytest, color: '#0a9edc' },
+  Copilot: { Icon: SiGithubcopilot, color: '#c9d1d9' },
+  Canvas: { Icon: FiPenTool, color: '#f472b6' },
 }
 
 export function TechIcon({ name, size = 18 }) {

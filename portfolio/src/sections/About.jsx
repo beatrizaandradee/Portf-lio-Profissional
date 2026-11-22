@@ -1,7 +1,7 @@
-import { FiCode, FiBriefcase, FiLayers, FiBookOpen, FiMapPin, FiSend } from 'react-icons/fi'
+import { FiCode, FiAward, FiLayers, FiBookOpen, FiMapPin, FiSend, FiFileText } from 'react-icons/fi'
 import { profile } from '../data/profile'
 import { projects } from '../data/projects'
-import { experiences } from '../data/experiences'
+import { certificates, awards } from '../data/achievements'
 import { useLang } from '../i18n/LanguageContext'
 import Avatar from '../components/Avatar'
 import Reveal from '../components/Reveal'
@@ -12,8 +12,8 @@ export default function About() {
 
   const stats = [
     { Icon: FiCode, value: projects.length, label: t.about.stats.projects, sub: t.about.stats.projectsSub },
-    { Icon: FiBriefcase, value: experiences.length, label: t.about.stats.exp, sub: t.about.stats.expSub },
-    { Icon: FiLayers, value: profile.stack.length, label: t.about.stats.tech, sub: t.about.stats.techSub },
+    { Icon: FiFileText, value: certificates.length, label: t.about.stats.certs, sub: t.about.stats.certsSub },
+    { Icon: FiAward, value: awards.length, label: t.about.stats.awards, sub: t.about.stats.awardsSub },
   ]
 
   return (
@@ -57,12 +57,12 @@ export default function About() {
             </h4>
             <ul className="edu__list">
               {profile.education.map((e) => (
-                <li key={e.institution + e.period}>
+                <li key={e.institution}>
                   <div className="edu__dot" />
                   <div>
                     <strong>{e.institution}</strong>
                     <span>{pick(e.course)}</span>
-                    <small>{e.period}</small>
+                    <small>{pick(e.period)}</small>
                   </div>
                 </li>
               ))}

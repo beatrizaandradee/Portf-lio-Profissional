@@ -1,48 +1,68 @@
 // =====================================================================
-//  EDITE AQUI: experiências profissionais, estágios, freelas,
-//  open source, eventos técnicos, monitorias, cursos...
-//  type: 'trabalho' | 'estagio' | 'freela' | 'opensource' | 'evento' | 'curso'
+//  EDITE AQUI: experiências: trabalho, estágios, freelas, open source,
+//  eventos técnicos, simulações, voluntariado...
+//  type: 'trabalho' | 'estagio' | 'freela' | 'opensource' | 'evento' | 'curso' | 'premio' | 'academico'
 // =====================================================================
 
 export const experiences = [
   {
-    type: 'estagio',
-    company: '[Nome da Empresa]',
-    role: { pt: 'Estagiária de Desenvolvimento', en: 'Development Intern' },
-    period: { pt: 'Jan 2026 – Atual', en: 'Jan 2026 – Present' },
+    type: 'premio',
+    company: 'Stellantis',
+    role: { pt: 'Premiada: Prêmio Stellantis de Educação', en: 'Winner: Stellantis Education Award' },
+    period: { pt: 'Nov 2026', en: 'Nov 2026' },
     description: {
-      pt: 'Apoio no desenvolvimento e manutenção de telas em React, correção de bugs e participação nas reuniões do time.',
-      en: 'Support in developing and maintaining React screens, fixing bugs and taking part in team meetings.',
+      pt: 'Reconhecimento recebido em cerimônia do programa da Stellantis que premia estudantes recém-formados pelo desempenho acadêmico e pelo compromisso com a educação contínua.',
+      en: "Award received at the ceremony of Stellantis' program that recognizes recent graduates for academic performance and commitment to continuous learning.",
     },
   },
   {
-    type: 'freela',
-    company: '[Cliente / Projeto]',
-    role: { pt: 'Desenvolvedora Freelancer', en: 'Freelance Developer' },
-    period: { pt: 'Ago 2025 – Out 2025', en: 'Aug 2025 – Oct 2025' },
+    type: 'academico',
+    company: 'PUC Minas',
+    role: { pt: 'Graduação em Engenharia de Software', en: 'Software Engineering Degree' },
+    period: { pt: '2026 – Atual', en: '2026 – Present' },
     description: {
-      pt: 'Criação de uma landing page responsiva para um pequeno negócio, do layout no Figma até a publicação.',
-      en: 'Built a responsive landing page for a small business, from the Figma layout to deployment.',
+      pt: 'Formação em desenvolvimento de software, algoritmos, engenharia de requisitos e projetos práticos. Este portfólio foi desenvolvido como atividade do curso.',
+      en: 'Training in software development, algorithms, requirements engineering and hands-on projects. This portfolio was built as a course assignment.',
+    },
+  },
+  {
+    type: 'curso',
+    company: 'Santander Open Academy',
+    role: { pt: 'Curso de Copilot (IA generativa)', en: 'Copilot Course (Generative AI)' },
+    period: { pt: 'Abr 2026 · 8h', en: 'Apr 2026 · 8h' },
+    description: {
+      pt: 'Uso de assistentes de IA para produtividade e desenvolvimento.',
+      en: 'Using AI assistants for productivity and development.',
+    },
+  },
+  {
+    type: 'curso',
+    company: 'Enap: Escola Nacional de Administração Pública',
+    role: { pt: 'Trilha de IA e Inovação (3 cursos)', en: 'AI & Innovation Track (3 courses)' },
+    period: { pt: 'Abr 2026 · nota 100 em todos', en: 'Apr 2026 · 100/100 in all' },
+    description: {
+      pt: 'Engenharia de prompt eficaz, IA para profissionais do direito e Fundamentos de construção industrializada.',
+      en: 'Effective prompt engineering, AI for legal professionals and Fundamentals of industrialized construction.',
     },
   },
   {
     type: 'evento',
-    company: '[Nome do Evento / Hackathon]',
-    role: { pt: 'Participante', en: 'Participant' },
-    period: { pt: 'Mai 2025', en: 'May 2025' },
+    company: 'Empowerdata',
+    role: { pt: 'Participante: Semana do Python na Prática', en: 'Participant: Python in Practice Week' },
+    period: { pt: 'Ago 2024 · 8h', en: 'Aug 2024 · 8h' },
     description: {
-      pt: 'Participação em equipe no desenvolvimento de um protótipo em 48 horas.',
-      en: 'Took part in a team building a prototype in 48 hours.',
+      pt: 'Evento prático de programação em Python, com foco em fundamentos e aplicações em dados.',
+      en: 'Hands-on Python programming event focused on fundamentals and data applications.',
     },
   },
   {
-    type: 'opensource',
-    company: 'GitHub',
-    role: { pt: 'Contribuições Open Source', en: 'Open Source Contributions' },
-    period: { pt: '2025 – Atual', en: '2025 – Present' },
+    type: 'evento',
+    company: 'PUC Minas · 24º MINIONU',
+    role: { pt: 'Delegada: Reino dos Países Baixos (OIT)', en: 'Delegate: Kingdom of the Netherlands (ILO)' },
+    period: { pt: 'Out 2023', en: 'Oct 2023' },
     description: {
-      pt: 'Pequenas contribuições em documentação e correções em projetos abertos.',
-      en: 'Small contributions to documentation and fixes in open projects.',
+      pt: 'Representei os Países Baixos no comitê da Organização Internacional do Trabalho no Modelo Intercolegial da ONU: pesquisa, negociação, oratória e escrita de resoluções.',
+      en: 'Represented the Netherlands at the International Labour Organization committee in the Inter-school UN Model: research, negotiation, public speaking and resolution writing.',
     },
   },
 ]

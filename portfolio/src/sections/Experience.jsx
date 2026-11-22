@@ -1,9 +1,9 @@
-import { FiBriefcase, FiCalendar, FiCode, FiAward, FiUsers, FiBookOpen, FiGithub } from 'react-icons/fi'
+import { FiBriefcase, FiCalendar, FiCode, FiAward, FiUsers, FiBookOpen, FiGithub, FiMic, FiMonitor } from 'react-icons/fi'
 import { experiences } from '../data/experiences'
 import { useLang } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
 
-const ICONS = { trabalho: FiBriefcase, estagio: FiUsers, freela: FiCode, opensource: FiGithub, evento: FiAward, curso: FiBookOpen }
+const ICONS = { trabalho: FiBriefcase, estagio: FiUsers, freela: FiCode, opensource: FiGithub, evento: FiMic, curso: FiMonitor, premio: FiAward, academico: FiBookOpen }
 
 export default function Experience() {
   const { t, pick } = useLang()
@@ -22,7 +22,7 @@ export default function Experience() {
           {experiences.map((e, i) => {
             const Icon = ICONS[e.type] || FiBriefcase
             return (
-              <Reveal as="article" key={e.company + i} className="exp card" delay={(i % 2) * 90}>
+              <Reveal as="article" key={e.company + i} className={`exp card ${e.type === 'premio' ? 'exp--award' : ''}`} delay={(i % 2) * 90}>
                 <div className="exp__head">
                   <div className="exp__icon">
                     <Icon size={20} />

@@ -1,79 +1,79 @@
 // =====================================================================
 //  EDITE AQUI: seus projetos.
-//  - "date" no formato 'AAAA-MM' — a linha do tempo ordena sozinha (mais antigo → mais recente).
-//  - "image": coloque a imagem/GIF em /public/projects/ e use '/projects/nome.gif'.
-//    Dica: grave a tela com o ScreenToGif (Windows) ou Kap (Mac) para gerar o GIF.
-//  - "repo": link do repositório no GitHub.
-//  - "demo": link do site publicado (opcional, pode deixar '').
+//  - "date" no formato 'AAAA-MM-DD' (ou 'AAAA-MM'): a linha do tempo ordena sozinha.
+//  - "image": GIF/print em /public/projects/
+//  - "repo": link do repositório; "demo": link do site publicado ('' se não tiver)
 // =====================================================================
+
+const GH = 'https://github.com/beatrizaandradee'
 
 export const projects = [
   {
-    id: 'calculadora',
-    date: '2024-04',
-    name: { pt: 'Calculadora Web', en: 'Web Calculator' },
+    id: 'analise-gastos',
+    date: '2026-11-10',
+    name: { pt: 'Análise de Gastos', en: 'Spending Analyzer' },
     description: {
-      pt: 'Primeiro projeto da faculdade: uma calculadora com operações básicas, histórico e layout responsivo.',
-      en: 'First college project: a calculator with basic operations, history and a responsive layout.',
+      pt: 'Ferramenta em Python que lê o extrato do banco, categoriza os gastos e gera um relatório com gráficos e recomendações.',
+      en: 'Python tool that reads bank statements, categorizes spending and generates a report with charts and recommendations.',
     },
     details: {
-      pt: 'Projeto feito para praticar manipulação do DOM com JavaScript puro. Tem tratamento de erros (divisão por zero), suporte ao teclado e histórico das últimas operações.',
-      en: 'Project built to practice DOM manipulation with vanilla JavaScript. It handles errors (division by zero), supports the keyboard and keeps a history of the latest operations.',
+      pt: 'Linha de comando feita com pandas e matplotlib. Lê CSVs de diferentes bancos (separadores, datas e valores em formato brasileiro), categoriza por palavras-chave, detecta assinaturas recorrentes e gastos fora do padrão (média + 2 desvios-padrão) e gera um relatório HTML com gráficos. Tem 25 testes automatizados com pytest.',
+      en: 'Command-line tool built with pandas and matplotlib. Reads CSVs from different banks (Brazilian separators, dates and number formats), categorizes by keywords, detects recurring subscriptions and outliers (mean + 2 standard deviations) and builds an HTML report with charts. 25 automated tests with pytest.',
     },
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-    image: '/projects/projeto-1.svg',
-    repo: 'https://github.com/beatrizaandradee',
+    tech: ['Python', 'Pandas', 'Matplotlib', 'Pytest'],
+    image: '/projects/analise-gastos.jpg',
+    repo: `${GH}/analise-gastos`,
     demo: '',
   },
   {
-    id: 'todo',
-    date: '2024-10',
-    name: { pt: 'Lista de Tarefas', en: 'To-do List' },
+    id: 'simulador-investimentos',
+    date: '2026-11-15',
+    name: { pt: 'Simulador de Investimentos', en: 'Investment Simulator' },
     description: {
-      pt: 'Aplicação de tarefas com login simples, filtros por status e dados salvos no navegador.',
-      en: 'To-do app with a simple login, status filters and data saved in the browser.',
+      pt: 'Compara Poupança, Tesouro Selic, CDB e LCI/LCA com aportes mensais, IR regressivo e inflação. Tudo em JavaScript puro.',
+      en: 'Compares Brazilian fixed-income investments with monthly deposits, regressive income tax and inflation. Pure JavaScript.',
     },
     details: {
-      pt: 'Tela de login, cadastro de tarefas, marcação de concluídas e filtros (todas, pendentes, concluídas). Os dados ficam no localStorage.',
-      en: 'Login screen, task creation, marking tasks as done and filters (all, pending, done). Data is kept in localStorage.',
+      pt: 'Calcula juros compostos mês a mês e aplica o IR regressivo separadamente em cada aporte, de acordo com o tempo que ele ficou aplicado. Mostra o valor real descontando a inflação, gráfico em canvas feito do zero, tabela ano a ano, calculadora de "em quanto tempo chego no objetivo" e link compartilhável. Lógica separada da interface e coberta por testes.',
+      en: 'Computes compound interest month by month and applies the regressive income tax to each deposit separately, based on how long it was invested. Shows inflation-adjusted values, a canvas chart built from scratch, a yearly table, a "how long to reach my goal" calculator and a shareable link. Logic is separated from the UI and covered by tests.',
     },
-    tech: ['React', 'JavaScript', 'CSS3'],
-    image: '/projects/projeto-2.svg',
-    repo: 'https://github.com/beatrizaandradee',
+    tech: ['JavaScript', 'HTML5', 'CSS3', 'Canvas'],
+    image: '/projects/simulador-investimentos.gif',
+    repo: `${GH}/simulador-investimentos`,
     demo: '',
   },
   {
-    id: 'dashboard',
-    date: '2025-05',
-    name: { pt: 'Dashboard de Vendas', en: 'Sales Dashboard' },
+    id: 'financas-app',
+    date: '2026-11-20',
+    name: { pt: 'Finanças+ · Controle Financeiro', en: 'Finanças+ · Money Manager' },
     description: {
-      pt: 'Painel com gráficos e indicadores consumindo uma API, com filtros por período.',
-      en: 'Dashboard with charts and KPIs consuming an API, with period filters.',
+      pt: 'App de finanças pessoais com dashboard, gráficos, orçamentos por categoria, metas de economia e exportação para Excel.',
+      en: 'Personal finance app with dashboard, charts, category budgets, savings goals and Excel export.',
     },
     details: {
-      pt: 'Consome dados de uma API REST, mostra indicadores e gráficos e permite filtrar por período. Projeto em grupo da disciplina de Desenvolvimento Web.',
-      en: 'Consumes data from a REST API, shows KPIs and charts and allows filtering by period. Group project for the Web Development course.',
+      pt: 'Feito em React + Vite. Dashboard com saldo, taxa de poupança e comparação com o mês anterior; gráficos de barras e de rosca desenhados em SVG; transações com busca, filtros e validação; orçamentos com alertas de 80% e 100%; metas que calculam quanto guardar por mês; tema claro/escuro e dados salvos no navegador. As regras de negócio são funções puras com testes automatizados.',
+      en: 'Built with React + Vite. Dashboard with balance, savings rate and month-over-month comparison; bar and donut charts drawn in SVG; transactions with search, filters and validation; budgets with 80%/100% alerts; goals that compute how much to save per month; light/dark theme and data saved in the browser. Business rules are pure functions with automated tests.',
     },
-    tech: ['React', 'Vite', 'Node.js', 'MySQL'],
-    image: '/projects/projeto-3.svg',
-    repo: 'https://github.com/beatrizaandradee',
+    tech: ['React', 'Vite', 'JavaScript', 'CSS3'],
+    image: '/projects/financas-app.gif',
+    repo: `${GH}/financas-app`,
     demo: '',
   },
   {
     id: 'portfolio',
-    date: '2026-11',
+    date: '2026-11-22',
     name: { pt: 'Portfólio Pessoal', en: 'Personal Portfolio' },
     description: {
-      pt: 'Este site! Portfólio em React + Vite, bilíngue, responsivo e com formulário de contato.',
-      en: 'This website! A React + Vite portfolio, bilingual, responsive and with a contact form.',
+      pt: 'Este site! Portfólio bilíngue em React + Vite, com linha do tempo, certificados e formulário de contato.',
+      en: 'This website! A bilingual React + Vite portfolio with a timeline, certificates and a contact form.',
     },
     details: {
-      pt: 'Fundo estrelado animado em canvas, crachá interativo, linha do tempo de projetos, troca de idioma PT/EN e formulário com envio por e-mail. Hospedado na Vercel.',
-      en: 'Animated starfield on canvas, interactive badge, project timeline, PT/EN language switch and a form that sends e-mails. Hosted on Vercel.',
+      pt: 'Fundo estrelado animado em canvas, crachá interativo, troca de idioma PT/EN com Context API, linha do tempo de projetos ordenada automaticamente, galeria de certificados e formulário com validação e envio real por e-mail. Hospedado na Vercel.',
+      en: 'Animated canvas starfield, interactive badge, PT/EN language switch with Context API, auto-sorted project timeline, certificate gallery and a validated contact form that sends real e-mails. Hosted on Vercel.',
     },
     tech: ['React', 'Vite', 'CSS3', 'Vercel'],
-    image: '/projects/projeto-4.svg',
-    repo: 'https://github.com/beatrizaandradee/portfolio',
+    image: '/projects/portfolio.jpg',
+    repo: `${GH}/portfolio`,
     demo: '',
   },
 ]

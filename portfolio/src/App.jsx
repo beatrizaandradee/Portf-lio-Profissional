@@ -7,6 +7,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Experience from './sections/Experience'
+import Achievements from './sections/Achievements'
 import Contact from './sections/Contact'
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <About />
         <Projects />
         <Experience />
+        <Achievements />
         <Contact />
       </main>
       <Footer />

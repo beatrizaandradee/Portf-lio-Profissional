@@ -1,7 +1,7 @@
 // Textos fixos da interface em português e inglês
 export const translations = {
   pt: {
-    nav: { home: 'Início', about: 'Sobre Mim', projects: 'Projetos', experience: 'Experiências', contact: 'Contato' },
+    nav: { home: 'Início', about: 'Sobre Mim', projects: 'Projetos', experience: 'Experiências', achievements: 'Conquistas', contact: 'Contato' },
     loading: 'Carregando...',
     hero: {
       welcome: 'Bem-vindo ao',
@@ -15,7 +15,7 @@ export const translations = {
       hi: 'Oi, eu sou a',
       education: 'Formação',
       stack: 'Tecnologias',
-      stats: { projects: 'Projetos', projectsSub: 'Desenvolvidos', exp: 'Experiências', expSub: 'Vividas', tech: 'Tecnologias', techSub: 'Que utilizo' },
+      stats: { projects: 'Projetos', projectsSub: 'Desenvolvidos', certs: 'Certificados', certsSub: 'Cursos e eventos', awards: 'Prêmio', awardsSub: 'Stellantis 2026' },
     },
     projects: {
       title: 'Projetos',
@@ -28,8 +28,15 @@ export const translations = {
     },
     experience: {
       title: 'Experiências',
-      subtitle: 'Trabalho, estágios, freelas, open source e eventos.',
-      types: { trabalho: 'Trabalho', estagio: 'Estágio', freela: 'Freela', opensource: 'Open Source', evento: 'Evento', curso: 'Curso' },
+      subtitle: 'Formação, prêmio, cursos e eventos que fazem parte da minha trajetória.',
+      types: { trabalho: 'Trabalho', estagio: 'Estágio', freela: 'Freela', opensource: 'Open Source', evento: 'Evento', curso: 'Curso', premio: 'Prêmio', academico: 'Acadêmico' },
+    },
+    achievements: {
+      title: 'Conquistas',
+      subtitle: 'Prêmio e certificados. Clique em um certificado para ver o PDF original.',
+      award: 'Prêmio',
+      certs: 'Certificados',
+      view: 'Ver certificado',
     },
     contact: {
       title: 'Contato',
@@ -55,7 +62,7 @@ export const translations = {
     footer: { rights: 'Todos os direitos reservados.', made: 'Feito com React + Vite', nav: 'Navegação', connect: 'Conecte-se', tagline: 'Construindo experiências web simples, acessíveis e bem feitas.' },
   },
   en: {
-    nav: { home: 'Home', about: 'About Me', projects: 'Projects', experience: 'Experience', contact: 'Contact' },
+    nav: { home: 'Home', about: 'About Me', projects: 'Projects', experience: 'Experience', achievements: 'Achievements', contact: 'Contact' },
     loading: 'Loading...',
     hero: {
       welcome: 'Welcome to',
@@ -69,7 +76,7 @@ export const translations = {
       hi: "Hi, I'm",
       education: 'Education',
       stack: 'Tech Stack',
-      stats: { projects: 'Projects', projectsSub: 'Built', exp: 'Experiences', expSub: 'Lived', tech: 'Technologies', techSub: 'I use' },
+      stats: { projects: 'Projects', projectsSub: 'Built', certs: 'Certificates', certsSub: 'Courses & events', awards: 'Award', awardsSub: 'Stellantis 2026' },
     },
     projects: {
       title: 'Projects',
@@ -82,8 +89,15 @@ export const translations = {
     },
     experience: {
       title: 'Experience',
-      subtitle: 'Work, internships, freelance, open source and events.',
-      types: { trabalho: 'Work', estagio: 'Internship', freela: 'Freelance', opensource: 'Open Source', evento: 'Event', curso: 'Course' },
+      subtitle: 'Education, award, courses and events that shaped my journey.',
+      types: { trabalho: 'Work', estagio: 'Internship', freela: 'Freelance', opensource: 'Open Source', evento: 'Event', curso: 'Course', premio: 'Award', academico: 'Academic' },
+    },
+    achievements: {
+      title: 'Achievements',
+      subtitle: 'Award and certificates. Click a certificate to see the original PDF.',
+      award: 'Award',
+      certs: 'Certificates',
+      view: 'View certificate',
     },
     contact: {
       title: 'Contact',

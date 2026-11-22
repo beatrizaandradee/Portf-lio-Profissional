@@ -1,6 +1,6 @@
-# 🌌 Portfólio — Beatriz Andrade
+# 🌌 Portfólio — Beatriz Almeida Andrade
 
-Website de portfólio profissional desenvolvido em **React + Vite**, com visual escuro inspirado no espaço (fundo estrelado animado), bilíngue (**português / inglês**), responsivo e hospedado gratuitamente na nuvem.
+Portfólio profissional de **Beatriz Almeida Andrade**, estudante de **Engenharia de Software na PUC Minas** e premiada no **Prêmio Stellantis de Educação**. Desenvolvido em **React + Vite**, com visual escuro inspirado no espaço (fundo estrelado animado), bilíngue (**português / inglês**), responsivo e hospedado gratuitamente na nuvem.
 
 🔗 **Site publicado:** https://SEU-PROJETO.vercel.app  ← _troque pelo link depois do deploy_
 📁 **Repositório:** https://github.com/beatrizaandradee/portfolio
@@ -14,12 +14,21 @@ Website de portfólio profissional desenvolvido em **React + Vite**, com visual 
 | **Início** | Tela de carregamento com porcentagem, título com gradiente, texto com efeito de digitação, crachá interativo que balança e inclina com o mouse, atalhos para redes sociais |
 | **Sobre Mim** | Apresentação em **PT e EN** (botão PT/EN no menu), foto, formação, contadores (projetos, experiências, tecnologias) e grade de tecnologias |
 | **Projetos** | **Linha do tempo dinâmica** ordenada automaticamente do mais antigo para o mais recente. Cada projeto tem nome, descrição, tecnologias, link do GitHub e imagem/GIF. Botão "Detalhes" abre um modal |
-| **Experiências** | Cards com empresa/instituição, cargo/atividade, período, descrição e tipo (estágio, freela, open source, evento...) |
+| **Experiências** | Cards com empresa/instituição, cargo/atividade, período, descrição e tipo (prêmio, acadêmico, curso, evento) |
+| **Conquistas** | Destaque do Prêmio Stellantis de Educação com foto da cerimônia e galeria de certificados (Santander, Enap, Empowerdata, PUC Minas) que abrem o PDF original |
 | **Contato** | Ícones clicáveis (e-mail, WhatsApp, LinkedIn, GitHub, Instagram) e **formulário com envio real por e-mail**, validação dos campos e proteção anti-spam |
 
 Extras: menu fixo que destaca a seção atual, menu hambúrguer no celular, animações de entrada ao rolar a página, idioma salvo no navegador, respeito à opção "reduzir movimento" do sistema e navegação por teclado.
 
 ---
+
+## 📌 Projetos em destaque
+
+| Projeto | Stack | Repositório |
+|---|---|---|
+| **Finanças+**: controle financeiro com dashboard, orçamentos e metas | React, Vite, SVG | [financas-app](https://github.com/beatrizaandradee/financas-app) |
+| **Simulador de Investimentos**: Poupança x Tesouro x CDB x LCI com IR regressivo | JavaScript, Canvas | [simulador-investimentos](https://github.com/beatrizaandradee/simulador-investimentos) |
+| **Análise de Gastos**: lê extrato CSV e gera relatório com recomendações | Python, pandas, matplotlib | [analise-gastos](https://github.com/beatrizaandradee/analise-gastos) |
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -52,8 +61,10 @@ Fontes: **Inter** e **JetBrains Mono** (Google Fonts).
 portfolio/
 ├── public/                  # Arquivos estáticos (servidos como estão)
 │   ├── favicon.svg
-│   ├── foto.jpg             # ← sua foto (adicione)
-│   └── projects/            # Imagens / GIFs dos projetos
+│   ├── foto.jpg             # Foto de perfil
+│   ├── img/                 # Foto do prêmio
+│   ├── certificados/        # PDFs + miniaturas dos certificados
+│   └── projects/            # GIFs e prints dos projetos
 ├── src/
 │   ├── components/          # Componentes reutilizáveis
 │   │   ├── Avatar.jsx       # Foto com fallback para iniciais
@@ -68,7 +79,8 @@ portfolio/
 │   ├── data/                # ⭐ CONTEÚDO DO SITE (edite aqui)
 │   │   ├── profile.js       # Dados pessoais, Sobre Mim, contatos
 │   │   ├── projects.js      # Projetos da linha do tempo
-│   │   └── experiences.js   # Experiências
+│   │   ├── experiences.js   # Experiências
+│   │   └── achievements.js  # Prêmio e certificados
 │   ├── i18n/                # Internacionalização PT/EN
 │   │   ├── LanguageContext.jsx
 │   │   └── translations.js
@@ -77,6 +89,7 @@ portfolio/
 │   │   ├── About.jsx
 │   │   ├── Projects.jsx
 │   │   ├── Experience.jsx
+│   │   ├── Achievements.jsx
 │   │   └── Contact.jsx
 │   ├── styles/global.css    # Estilos e identidade visual
 │   ├── App.jsx
@@ -124,13 +137,14 @@ npm run preview
 1. **Dados pessoais e "Sobre Mim":** `src/data/profile.js`
 2. **Projetos:** `src/data/projects.js` (data no formato `AAAA-MM`; a ordem da linha do tempo é automática)
 3. **Experiências:** `src/data/experiences.js`
+3b. **Prêmio e certificados:** `src/data/achievements.js`
 4. **Foto:** salve como `public/foto.jpg`
 5. **Imagens/GIFs dos projetos:** coloque em `public/projects/` e aponte o campo `image`
 6. **Cores:** variáveis no topo de `src/styles/global.css`
 
 ### Formulário de contato (envio por e-mail)
 
-1. Em `src/data/profile.js`, troque `seuemail@exemplo.com` pelo seu e-mail em `contact.email` **e** em `formEndpoint`.
+1. O e-mail de destino fica em `src/data/profile.js` (`contact.email` e `formEndpoint`).
 2. Publique o site e envie uma mensagem de teste.
 3. O FormSubmit manda um e-mail de ativação: clique em **Activate Form**. A partir daí todas as mensagens chegam na sua caixa de entrada.
 
@@ -150,4 +164,4 @@ A cada `git push`, a Vercel publica a nova versão automaticamente.
 
 ## 👩‍💻 Autora
 
-**Beatriz Andrade** — [GitHub](https://github.com/beatrizaandradee)
+**Beatriz Almeida Andrade** · [LinkedIn](https://www.linkedin.com/in/beatriz-almeida-975408325/) · [GitHub](https://github.com/beatrizaandradee) · [Instagram](https://www.instagram.com/aandrade.bia)

@@ -4,73 +4,76 @@
 // =====================================================================
 
 export const profile = {
-  name: 'Beatriz Andrade',
+  name: 'Beatriz Almeida Andrade',
   shortName: 'Beatriz',
   initials: 'BA',
 
-  // Coloque sua foto em /public/foto.jpg (formato retrato, ex.: 600x800).
-  // Enquanto não existir, o site mostra suas iniciais no lugar.
+  // Foto em /public/foto.jpg (se for trocar, mantenha formato retrato 3:4)
   photo: '/foto.jpg',
 
   role: {
-    pt: 'Desenvolvedora Front-end',
-    en: 'Front-end Developer',
+    pt: 'Estudante de Engenharia de Software',
+    en: 'Software Engineering Student',
   },
 
   // Frases que aparecem "digitando" no topo do site
   typing: {
-    pt: ['Desenvolvedora Front-end', 'Estudante de Tecnologia', 'React & JavaScript'],
-    en: ['Front-end Developer', 'Technology Student', 'React & JavaScript'],
+    pt: ['Engenharia de Software · PUC Minas', 'Desenvolvedora Front-end', 'React · JavaScript · Python', 'Premiada no Prêmio Stellantis de Educação'],
+    en: ['Software Engineering · PUC Minas', 'Front-end Developer', 'React · JavaScript · Python', 'Stellantis Education Award winner'],
   },
 
   heroText: {
-    pt: 'Transformo ideias em interfaces simples, bonitas e acessíveis. Aqui você encontra minha trajetória, meus projetos e as formas de falar comigo.',
-    en: 'I turn ideas into simple, beautiful and accessible interfaces. Here you will find my journey, my projects and the ways to reach me.',
+    pt: 'Sou a Bia, estudante de Engenharia de Software na PUC Minas. Gosto de transformar problemas do dia a dia, como organizar as finanças, em aplicações simples, bonitas e úteis.',
+    en: "I'm Bia, a Software Engineering student at PUC Minas. I love turning everyday problems, like managing money, into simple, beautiful and useful applications.",
   },
 
   // ---- Sobre Mim (PT e EN) ----
   about: {
     pt: [
-      'Sou estudante de [SEU CURSO] na [SUA FACULDADE] e estou construindo minha carreira em desenvolvimento de software, com foco em front-end.',
-      'Gosto de criar interfaces que sejam fáceis de usar e de aprender tecnologias novas na prática, através de projetos. Tenho interesse em React, design de interfaces e boas práticas de código.',
-      'Meu objetivo é atuar como desenvolvedora, contribuindo em projetos reais e crescendo junto com um time.',
+      'Sou estudante de Engenharia de Software na PUC Minas, em Belo Horizonte. Cursei o ensino médio no Colégio Educare e no SESI Betim e fui premiada no Prêmio Stellantis de Educação, que reconhece estudantes pelo desempenho acadêmico.',
+      'Meu foco é desenvolvimento web com React e JavaScript, e também uso Python para análise de dados. Gosto especialmente de projetos ligados a finanças pessoais: criei um app de controle financeiro, um simulador de investimentos e uma ferramenta que analisa extratos bancários.',
+      'Busco meu primeiro estágio em desenvolvimento para aprender com um time, contribuir com produtos reais e crescer como engenheira de software.',
     ],
     en: [
-      'I am a [YOUR COURSE] student at [YOUR UNIVERSITY], building my career in software development with a focus on front-end.',
-      'I enjoy creating interfaces that are easy to use and learning new technologies hands-on, through projects. I am interested in React, interface design and good coding practices.',
-      'My goal is to work as a developer, contributing to real projects and growing together with a team.',
+      "I'm a Software Engineering student at PUC Minas, in Belo Horizonte, Brazil. I attended high school at Colégio Educare and SESI Betim, and I received the Stellantis Education Award, which recognizes students for academic achievement.",
+      'My focus is web development with React and JavaScript, and I also use Python for data analysis. I especially enjoy personal finance projects: I built a money management app, an investment simulator and a tool that analyzes bank statements.',
+      "I'm looking for my first software development internship, to learn with a team, contribute to real products and grow as a software engineer.",
     ],
   },
 
-  location: { pt: 'Brasil', en: 'Brazil' },
+  location: { pt: 'Betim · Belo Horizonte, MG', en: 'Betim · Belo Horizonte, Brazil' },
 
   education: [
     {
-      institution: '[Sua Faculdade]',
-      course: { pt: '[Seu Curso] — Graduação', en: '[Your Course] — Undergraduate' },
-      period: '2024 – 2027',
+      institution: 'PUC Minas',
+      course: { pt: 'Bacharelado em Engenharia de Software', en: "Bachelor's in Software Engineering" },
+      period: { pt: '2026 – em andamento', en: '2026 – present' },
     },
     {
-      institution: '[Sua Escola]',
-      course: { pt: 'Ensino Médio', en: 'High School' },
-      period: '2021 – 2023',
+      institution: 'SESI Betim',
+      course: { pt: 'Ensino Médio (2º e 3º ano)', en: 'High School (2nd and 3rd year)' },
+      period: { pt: '2024 – 2025', en: '2024 – 2025' },
+    },
+    {
+      institution: 'Colégio Educare',
+      course: { pt: 'Ensino Médio (1º ano)', en: 'High School (1st year)' },
+      period: { pt: '2023', en: '2023' },
     },
   ],
 
-  // Tecnologias que você usa (os ícones já estão mapeados em components/TechIcon.jsx)
-  stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Vite', 'Git', 'GitHub', 'Node.js', 'Python', 'Figma', 'Vercel', 'MySQL'],
+  // Tecnologias que você usa (os ícones estão mapeados em components/TechIcon.jsx)
+  stack: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Python', 'Vite', 'Git', 'GitHub', 'Node.js', 'Figma', 'Vercel', 'Copilot'],
 
   // ---- Contato ----
   contact: {
-    email: 'seuemail@exemplo.com',
-    // Só números, com DDI 55 + DDD. Ex.: 5511999999999
-    whatsapp: '5511999999999',
-    linkedin: 'https://www.linkedin.com/in/seu-perfil',
+    email: 'biaalmeida.andrade7@gmail.com',
+    whatsapp: '5531999270708',
+    linkedin: 'https://www.linkedin.com/in/beatriz-almeida-975408325/',
     github: 'https://github.com/beatrizaandradee',
-    instagram: 'https://www.instagram.com/seu-perfil',
+    instagram: 'https://www.instagram.com/aandrade.bia',
   },
 
   // Formulário de contato: envia para o e-mail acima via FormSubmit (grátis, sem cadastro).
-  // Na PRIMEIRA mensagem enviada, o FormSubmit manda um e-mail de ativação para você: é só clicar em "Activate".
-  formEndpoint: 'https://formsubmit.co/ajax/seuemail@exemplo.com',
+  // Na PRIMEIRA mensagem enviada, o FormSubmit manda um e-mail de ativação: clique em "Activate Form".
+  formEndpoint: 'https://formsubmit.co/ajax/biaalmeida.andrade7@gmail.com',
 }
