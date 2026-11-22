@@ -185,7 +185,8 @@ button {
 }
 .nav__links a {
   display: block;
-  padding: 0.45rem 0.85rem;
+  white-space: nowrap;
+  padding: 0.45rem 0.75rem;
   border-radius: 999px;
   font-size: 0.86rem;
   font-weight: 500;
@@ -852,6 +853,175 @@ button {
   color: #fff;
 }
 
+/* Mini projetos */
+.mini__anchor {
+  position: relative;
+  top: -20px;
+}
+.mini__title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 5rem 0 0.4rem;
+}
+.mini__sub {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 0 1.8rem;
+}
+.mini {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.mini__card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.mini__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}
+.mini__thumb {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background: #0a1022;
+  overflow: hidden;
+}
+.mini__thumb img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.mini__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  background: rgba(5, 7, 15, 0.55);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.mini__thumb:hover .mini__play,
+.mini__thumb:focus-visible .mini__play {
+  opacity: 1;
+}
+.mini__thumb:hover img {
+  transform: scale(1.06);
+}
+.mini__body {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+.mini__body h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.mini__body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  flex: 1;
+}
+.mini__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.mini__tags small {
+  font-size: 0.66rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 99px;
+  background: rgba(59, 123, 255, 0.14);
+  color: var(--primary-2);
+}
+.mini__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.mini__links button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--primary-2);
+}
+.mini__links button:hover {
+  color: #fff;
+}
+.mini__links button,
+.mini__links a {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--muted);
+}
+.mini__links a:hover {
+  color: #fff;
+}
+
+/* Janela do mini projeto */
+.mini-modal {
+  width: min(880px, 100%);
+  height: min(720px, 92vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.mini-modal__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.8rem 0.7rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+.mini-modal__actions {
+  display: flex;
+  gap: 0.4rem;
+}
+.mini-modal__actions a,
+.mini-modal__actions button {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+.mini-modal__actions a:hover,
+.mini-modal__actions button:hover {
+  border-color: var(--primary-2);
+}
+.mini-modal iframe {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #0f1020;
+}
+
 /* Modal */
 .modal {
   position: fixed;
@@ -1396,12 +1566,15 @@ button {
   .certs {
     grid-template-columns: repeat(2, 1fr);
   }
+  .mini {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .award {
     grid-template-columns: 240px 1fr;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .nav__pill {
     width: 100%;
     justify-content: space-between;
@@ -1440,6 +1613,9 @@ button {
     font-size: 0.95rem;
   }
 
+}
+
+@media (max-width: 900px) {
   .about__grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1498,6 +1674,12 @@ button {
   .footer__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mini {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

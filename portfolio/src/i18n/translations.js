@@ -1,7 +1,7 @@
 // Textos fixos da interface em português e inglês
 export const translations = {
   pt: {
-    nav: { home: 'Início', about: 'Sobre Mim', projects: 'Projetos', experience: 'Experiências', achievements: 'Conquistas', contact: 'Contato' },
+    nav: { home: 'Início', about: 'Sobre Mim', projects: 'Projetos', mini: 'Mini Projetos', experience: 'Experiências', achievements: 'Conquistas', contact: 'Contato' },
     loading: 'Carregando...',
     hero: {
       welcome: 'Bem-vindo ao',
@@ -25,6 +25,12 @@ export const translations = {
       demo: 'Ver online',
       techUsed: 'Tecnologias utilizadas',
       close: 'Fechar',
+      mini: 'Mini Projetos',
+      miniSub: 'Projetos menores para praticar lógica e JavaScript. Clique para testar aqui mesmo!',
+      live: 'Ver online',
+      play: 'Testar aqui',
+      newTab: 'Abrir em nova aba',
+      code: 'Código',
     },
     experience: {
       title: 'Experiências',
@@ -62,7 +68,7 @@ export const translations = {
     footer: { rights: 'Todos os direitos reservados.', made: 'Feito com React + Vite', nav: 'Navegação', connect: 'Conecte-se', tagline: 'Construindo experiências web simples, acessíveis e bem feitas.' },
   },
   en: {
-    nav: { home: 'Home', about: 'About Me', projects: 'Projects', experience: 'Experience', achievements: 'Achievements', contact: 'Contact' },
+    nav: { home: 'Home', about: 'About Me', projects: 'Projects', mini: 'Mini Projects', experience: 'Experience', achievements: 'Achievements', contact: 'Contact' },
     loading: 'Loading...',
     hero: {
       welcome: 'Welcome to',
@@ -86,6 +92,12 @@ export const translations = {
       demo: 'Live demo',
       techUsed: 'Technologies used',
       close: 'Close',
+      mini: 'Mini Projects',
+      miniSub: 'Smaller projects to practice logic and JavaScript. Click to try them right here!',
+      live: 'Live',
+      play: 'Try it here',
+      newTab: 'Open in new tab',
+      code: 'Code',
     },
     experience: {
       title: 'Experience',

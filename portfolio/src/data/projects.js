@@ -9,6 +9,23 @@ const GH = 'https://github.com/beatrizaandradee'
 
 export const projects = [
   {
+    id: 'mini-projetos',
+    date: '2026-11-05',
+    name: { pt: 'Mini Projetos', en: 'Mini Projects' },
+    description: {
+      pt: 'Coleção de 5 apps em JavaScript puro: calculadora, lista de tarefas, gerador de senhas, jogo da velha e pomodoro.',
+      en: 'A collection of 5 vanilla JavaScript apps: calculator, to-do list, password generator, tic-tac-toe and pomodoro.',
+    },
+    details: {
+      pt: 'Projetos curtos para praticar lógica e manipulação do DOM, reunidos em uma galeria. Destaques: jogo da velha com o algoritmo Minimax (a CPU nunca perde), gerador de senhas com crypto.getRandomValues e cálculo de entropia, e pomodoro com anel de progresso em SVG e alarme gerado pela Web Audio API.',
+      en: 'Short projects to practice logic and DOM manipulation, gathered in a gallery. Highlights: tic-tac-toe with the Minimax algorithm (the CPU never loses), password generator with crypto.getRandomValues and entropy calculation, and a pomodoro timer with an SVG progress ring and an alarm generated with the Web Audio API.',
+    },
+    tech: ['JavaScript', 'HTML5', 'CSS3'],
+    image: '/projects/mini-projetos.gif',
+    repo: `${GH}/portfolio/tree/main/public/mini-projetos`,
+    demo: '/mini-projetos/',
+  },
+  {
     id: 'analise-gastos',
     date: '2026-11-10',
     name: { pt: 'Análise de Gastos', en: 'Spending Analyzer' },

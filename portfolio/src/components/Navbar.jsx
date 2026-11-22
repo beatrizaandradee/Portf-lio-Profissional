@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useLang } from '../i18n/LanguageContext'
 
-export const SECTIONS = ['home', 'about', 'projects', 'experience', 'achievements', 'contact']
+export const SECTIONS = ['home', 'about', 'projects', 'mini', 'experience', 'achievements', 'contact']
 
 export default function Navbar() {
   const { t, lang, setLang } = useLang()
